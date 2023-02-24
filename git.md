@@ -20,3 +20,12 @@
 
 
 
+> Commands
+```bash
+- To initialize Git repository(/.git/): `git init`
+- show all local and remote branches that (local) git knows about: `git branch -a`
+- Check repository status: `git status`
+
+
+
+```
