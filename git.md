@@ -21,18 +21,22 @@
 #### HEAD is a symbolic reference most often pointing to the currently checked out branch. Sometimes the HEAD points directly to a commit object, this is called detached HEAD mode. In that state creation of a commit will not move any branch. If you switch branches, the HEAD pointer points to the branch pointer which in turn points to a commit. If you checkout a specific commit, the HEAD points to this commit directly. 
 
 
-
 ## Commands
 - Initialize Git repository(/.git/): `git init`
-- Show all local and remote branches that (local) git knows about: `git branch -a`
 - Check repository status: `git status`
-- Check for changes in GitHub repository and pull down any new changes: `git pull origin master`
-- push our local changes to our origin repo. The -u tells Git to remember the parameters, so that next time we can simply run `git push`: `git push -u origin master`
-- what is different from our last commit ? `git diff`
 - remembers all the changes we've committed so far, in the order we committed: `git log`
+- Show all local and remote branches that (local) git knows about: `git branch -a`
+- Delete a branch (add --force (-f) option if something that hasn't been merged or use -D which combines -d -f together): `git branch -d <branch name>`
+- To checkout and create a branch, use `git checkout -b new_branch`. This is same as doing: `git branch new_branch` and `git checkout new_branch`
 - Remove the actual files from disk and stage the removal of the files: `git rm filename`
 - Add changes to staging area to track the changes: `git add filename`
+- Sometimes when you go to pull you may have changes you don't want to commit just yet. Use the command `git stash` to stash your changes, and `git stash apply` to re-apply your changes after your pull. 
 - To store our staged changes: `git commit -m "Just added the file"`
-- 
+- Unstage files: `git reset filename`
+- Check for changes in GitHub repository and pull down any new changes: `git pull origin master`
+- Check what is different from our last commit: `git diff`. Add `--staged` option to see the changes you just staged 
+- To update the local list of remote branches: `git remote update origin [--prune]`
+- To push our local repo to the GitHub server: `git remote add`
+- push our local changes to our origin repo. The -u tells Git to remember the parameters, so that next time we can simply run `git push`: `git push -u origin master`
+- Merge your changes from the other_branch into the master branch (already into master branch): `git merge clean_up`
 
-```
