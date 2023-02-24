@@ -25,7 +25,7 @@
 - Initialize Git repository(/.git/): `git init`
 - Check repository status: `git status`
 - remembers all the changes we've committed so far, in the order we committed: `git log`
-- List all commits which are in the "testing" but not in the "master" branch: `git log master..testing`
+- The double dot operator allows you to select all commits which are reachable from a commit c2 but not from commit c1. The syntax for this is "c1..c2". A commit A is reachable from another commit B if A is a direct or indirect parent of B. List all commits which are in the `testing` but not in the `master` branch: `git log master..testing`. The triple dot operator allows to select all commits which are reachable either from commit c1 or commit c2 but not from both of them. This is useful to show all commits in two branches which have not yet been combined: `git log <branch1>...<branch2>`
 - Show all local and remote branches that (local) git knows about: `git branch -a`
 - Delete a branch (add --force (-f) option if something that hasn't been merged or use -D which combines -d -f together): `git branch -d <branch name>`
 - To checkout and create a branch, use `git checkout -b new_branch`. This is same as doing: `git branch new_branch` and `git checkout new_branch`
@@ -40,6 +40,4 @@
 - To update the local list of remote branches: `git remote update origin [--prune]`
 - To push our local repo to the GitHub server: `git remote add`
 - push our local changes to our origin repo. The -u tells Git to remember the parameters, so that next time we can simply run `git push`: `git push -u origin master`
-- Merge your changes from the other_branch into the master branch (already into master branch): `git merge clean_up`
-- The triple dot operator allows to select all commits which are reachable either from commit c1 or commit c2 but not from both of them. This is useful to show all commits in two branches which have not yet been combined: `git log <branch1>...<branch2>`
-
+- Merge your changes from the `other_branch` into the master branch (already into master branch): `git merge other_branch`
