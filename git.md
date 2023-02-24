@@ -35,9 +35,14 @@
 - Sometimes when you go to pull you may have changes you don't want to commit just yet. Use the command `git stash` to stash your changes, and `git stash apply` to re-apply your changes after your pull. 
 - To store our staged changes: `git commit -m "Just added the file"`
 - Unstage files: `git reset filename`
-- Check for changes in GitHub repository and pull down any new changes: `git pull origin master`
+- Undo changes made in the working directory and staging area: `git reset --mixed`
+- Check for changes in GitHub repository and pull down any new changes: `git pull origin master` `(= git fetch + git merge origin/ master)`
 - Check what is different from our last commit: `git diff`. Add `--staged` option to see the changes you just staged 
 - To update the local list of remote branches: `git remote update origin [--prune]`
 - To push our local repo to the GitHub server: `git remote add`
 - push our local changes to our origin repo. The -u tells Git to remember the parameters, so that next time we can simply run `git push`: `git push -u origin master`
 - Merge your changes from the `other_branch` into the master branch (already into master branch): `git merge other_branch`
+- Revert changes of commit: `git revert <commit id>`
+
+
+
