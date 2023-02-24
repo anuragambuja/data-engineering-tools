@@ -25,9 +25,11 @@
 - Initialize Git repository(/.git/): `git init`
 - Check repository status: `git status`
 - remembers all the changes we've committed so far, in the order we committed: `git log`
+- List all commits which are in the "testing" but not in the "master" branch: `git log master..testing`
 - Show all local and remote branches that (local) git knows about: `git branch -a`
 - Delete a branch (add --force (-f) option if something that hasn't been merged or use -D which combines -d -f together): `git branch -d <branch name>`
 - To checkout and create a branch, use `git checkout -b new_branch`. This is same as doing: `git branch new_branch` and `git checkout new_branch`
+- Files can be changed back to how they were at the last commit by using the command: `git checkout -- <target>`
 - Remove the actual files from disk and stage the removal of the files: `git rm filename`
 - Add changes to staging area to track the changes: `git add filename`
 - Sometimes when you go to pull you may have changes you don't want to commit just yet. Use the command `git stash` to stash your changes, and `git stash apply` to re-apply your changes after your pull. 
@@ -39,4 +41,5 @@
 - To push our local repo to the GitHub server: `git remote add`
 - push our local changes to our origin repo. The -u tells Git to remember the parameters, so that next time we can simply run `git push`: `git push -u origin master`
 - Merge your changes from the other_branch into the master branch (already into master branch): `git merge clean_up`
+- The triple dot operator allows to select all commits which are reachable either from commit c1 or commit c2 but not from both of them. This is useful to show all commits in two branches which have not yet been combined: `git log <branch1>...<branch2>`
 
