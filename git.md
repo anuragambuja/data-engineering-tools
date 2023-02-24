@@ -1,3 +1,5 @@
+## Overview
+
 #### Git originates from the Linux kernel development and was founded in 2005 by Linus Torvalds. The core of Git was originally written in the programming language _C, but Git has also been re-implemented in other languages, e.g., Java, Ruby and Python. 
 
 #### A file in the working tree of a Git repository can have different states. These states are the following: 
@@ -20,12 +22,17 @@
 
 
 
-> Commands
-```bash
-- To initialize Git repository(/.git/): `git init`
-- show all local and remote branches that (local) git knows about: `git branch -a`
+## Commands
+- Initialize Git repository(/.git/): `git init`
+- Show all local and remote branches that (local) git knows about: `git branch -a`
 - Check repository status: `git status`
-
-
+- Check for changes in GitHub repository and pull down any new changes: `git pull origin master`
+- push our local changes to our origin repo. The -u tells Git to remember the parameters, so that next time we can simply run `git push`: `git push -u origin master`
+- what is different from our last commit ? `git diff`
+- remembers all the changes we've committed so far, in the order we committed: `git log`
+- Remove the actual files from disk and stage the removal of the files: `git rm filename`
+- Add changes to staging area to track the changes: `git add filename`
+- To store our staged changes: `git commit -m "Just added the file"`
+- 
 
 ```
